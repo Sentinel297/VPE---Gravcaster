@@ -1,0 +1,74 @@
+<Defs>
+	<HediffDef>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defName>TelekineticSatellitesSTNL</defName>
+		<label>Telekinetic Satellites</label>
+		<description>Small stones are orbiting this pawn, they will shoot themselves at nearby enemies.</description>
+		<descriptionShort>Small stones are orbiting this pawn, they will shoot themselves at nearby enemies.</descriptionShort>
+		<defaultLabelColor>(1, 0, 0)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+		<stages>
+			<li>
+</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Sculpt</stateEffecter>
+			</li>
+			<li Class="VPE_Gravmancer.HediffCompProperties_ShootNearest">
+				<projectile>Bullet_Scattergun</projectile>
+				<maxShots>30</maxShots>
+				<ticksBetweenShots>100</ticksBetweenShots>
+				<range>25</range>
+				<burstCount>10</burstCount>
+				<ticksBetweenBurstShots>120</ticksBetweenBurstShots>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>GravityEnhancedSTNL</defName>
+		<label>Increased Gravity</label>
+		<description>This pawn is feeling the effects of an increased gravity pull, pinning them on the ground.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>30000</disappearsAfterTicks>
+				<!-- 1~2 days -->
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>CrushOpportunitySTNL</defName>
+		<label>Exposure: Crush</label>
+		<description>Using Crush on this pawn will cause the Collapse effect, creating an explosion.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1800</disappearsAfterTicks>
+				<!-- 1~2 days -->
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			      <li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+	</HediffDef>
+</Defs>

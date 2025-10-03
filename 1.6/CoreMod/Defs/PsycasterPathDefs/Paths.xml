@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_GravmancerSTNL</defName>
+    <label>Gravcaster</label>
+    <description>Use the power of gravity to affect the world in many ways.</description>
+    <background>UI_GravmancerSTNL/Tree/Gravmancertreebase</background>
+    <altBackground>UI_GravmancerSTNL/Tree/Gravmancertreebase</altBackground>
+    <tab>Misc</tab>
+    <tooltip>Use the power of gravity to affect the world in many ways.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+
+</Defs>

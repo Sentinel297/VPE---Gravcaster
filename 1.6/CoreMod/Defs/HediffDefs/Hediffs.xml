@@ -20,7 +20,6 @@
 			</li>
 			<li Class="VPE_Gravmancer.HediffCompProperties_ShootNearest">
 				<projectile>Bullet_Scattergun</projectile>
-				<maxShots>30</maxShots>
 				<ticksBetweenShots>100</ticksBetweenShots>
 				<range>25</range>
 				<burstCount>10</burstCount>
@@ -28,6 +27,7 @@
 			</li>
 		</comps>
 	</HediffDef>
+	
 	<HediffDef>
 		<defName>GravityEnhancedSTNL</defName>
 		<label>Increased Gravity</label>
@@ -65,10 +65,72 @@
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<disappearsAfterTicks>1800</disappearsAfterTicks>
-				<!-- 1~2 days -->
 				<showRemainingTime>true</showRemainingTime>
 			</li>
-			      <li Class="HediffCompProperties_DisappearsOnDeath" />
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
 		</comps>
 	</HediffDef>
+	
+<HediffDef>
+	<defName>VPE_Gravcaster_Gravshield_STNL</defName>
+	<label>Gravshield</label>
+	<description>This creature is being protected by a gravitational anomaly that will send any projectile hitting it back to the attacker.</description>
+	<hediffClass>VPE_Gravmancer.Hediff_Gravshield</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+        <statFactors>
+          <Flammability>0</Flammability>
+        </statFactors>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>20000</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+</HediffDef>
+
+<HediffDef>
+	<defName>VPE_Gravcaster_Greater_Gravshield_STNL</defName>
+	<label>Greater Gravshield</label>
+	<description>This creature is upkeeping a gravitational anomaly to protect itself and nearby creatures. \n\nThe process is mentally taxing, causing this creature to be unable to passively lose neural heat while the shield is active.</description>
+	<hediffClass>VPE_Gravmancer.Hediff_GreaterGravShield</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<statFactors>
+				<Flammability>0</Flammability>
+				<PsychicEntropyRecoveryRate>0</PsychicEntropyRecoveryRate>
+			</statFactors>
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+</HediffDef>
 </Defs>

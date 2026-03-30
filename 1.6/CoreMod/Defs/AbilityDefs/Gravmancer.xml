@@ -34,6 +34,47 @@
 		</modExtensions>
 	</VEF.Abilities.AbilityDef>
 	<!-- Level 2 -->
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Gravcaster_Gravshield_STNL</defName>
+	<label>Gravshield</label>
+	<description>Protects the target creature with a gravitational anomaly that will deflect projectiles back to the attacker.</description>
+	<iconPath>UI_GravmancerSTNL/Abilities/TheHellIsThatNaming</iconPath>
+	<castTime>60</castTime>
+	<durationTime>12500</durationTime>
+	<durationTimeStatFactors>
+		<PsychicSensitivity>1</PsychicSensitivity>
+	</durationTimeStatFactors>
+	<chance>0</chance>
+	<targetMode>Pawn</targetMode>
+	<targetingParameters>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>true</canTargetSelf>
+		<canTargetAnimals>true</canTargetAnimals>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetHumans>true</canTargetHumans>
+		<!-- <canTargetItems>false</canTargetItems> -->
+		<canTargetMechs>true</canTargetMechs>
+		<!-- <mapObjectTargetsMustBeAutoAttackable>False</mapObjectTargetsMustBeAutoAttackable> -->
+	</targetingParameters>
+	<range>-1</range>
+	<hasAoE>false</hasAoE>
+	<castSound>PsycastPsychicPulse</castSound>
+	<needsTicking>true</needsTicking>
+	<abilityClass>VPE_Gravmancer.Ability_Gravshield</abilityClass>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_GravmancerSTNL</path>
+			<level>2</level>
+			<order>2</order>
+			<psyfocusCost>0.07</psyfocusCost>
+			<entropyGain>40</entropyGain>
+			<prerequisites>
+				<li>VPE_TelekineticSatelliteSTNL</li>
+			</prerequisites>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_TelekineticSatelliteSTNL</defName>
 		<label>Telekinetic Satellites</label>
@@ -52,7 +93,7 @@
 			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
 				<path>VPE_GravmancerSTNL</path>
 				<level>2</level>
-				<order>1</order>
+				<order>2</order>
 				<psyfocusCost>0.15</psyfocusCost>
 				<entropyGain>15</entropyGain>
 				<prerequisites>
@@ -105,10 +146,10 @@
 		<label>Gravimpact</label>
 		<description>Rapidly compress and expand gravity on itself, causing a phenomenon similar to a detonation. Then hurl yourself to the target location.</description>
 		<iconPath>UI_GravmancerSTNL/Abilities/IMP</iconPath>
-		<castTime>180</castTime>
+		<castTime>60</castTime>
 		<durationTime>60000</durationTime>
 		<targetMode>Pawn</targetMode>
-		<range>16.9</range>
+		<range>20.9</range>
 		<radius>2.9</radius>
 		<chance>0</chance>
 		<hasAoE>false</hasAoE>
@@ -130,7 +171,7 @@
 				<path>VPE_GravmancerSTNL</path>
 				<level>3</level>
 				<order>1</order>
-				<psyfocusCost>0.30</psyfocusCost>
+				<psyfocusCost>0.05</psyfocusCost>
 				<entropyGain>40</entropyGain>
 				<prerequisites>
 					<li>VPE_TelekineticSatelliteSTNL</li>
@@ -148,8 +189,8 @@
 		<durationTime>0</durationTime>
 		<targetMode>Pawn</targetMode>
 		<chance>0</chance>
-		<range>18.9</range>
-		<radius>5</radius>
+		<range>40.9</range>
+		<radius>0</radius>
 		<hasAoE>false</hasAoE>
 		<castSound>VPE_SkipGate_Cast</castSound>
 		<needsTicking>true</needsTicking>
@@ -169,8 +210,8 @@
 				<path>VPE_GravmancerSTNL</path>
 				<level>4</level>
 				<order>3</order>
-				<psyfocusCost>0.35</psyfocusCost>
-				<entropyGain>20</entropyGain>
+				<psyfocusCost>0.12</psyfocusCost>
+				<entropyGain>80</entropyGain>
 				<prerequisites>
 					<li>VPE_GravimpactSTNL</li>
 				</prerequisites>
@@ -179,14 +220,14 @@
 	</VEF.Abilities.AbilityDef>
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_FallingSkySTNL</defName>
-		<label>Falling Sky</label>
-		<description>Alter the gravity of nearby asteroids, causing them to crash on your target.</description>
+		<label>Meteor Strike</label>
+		<description>Alter the gravity of nearby asteroids, causing them to come crashing down on your target.</description>
 		<iconPath>World/WorldObjects/Expanding/AsteroidMine</iconPath>
 		<castTime>180</castTime>
 		<durationTime>60000</durationTime>
 		<targetMode>Pawn</targetMode>
-		<range>18.9</range>
-		<radius>5</radius>
+		<range>35.9</range>
+		<radius>0</radius>
 		<chance>0</chance>
 		<hasAoE>false</hasAoE>
 		<castSound>VPE_SkipGate_Cast</castSound>
@@ -207,8 +248,8 @@
 				<path>VPE_GravmancerSTNL</path>
 				<level>4</level>
 				<order>2</order>
-				<psyfocusCost>0.28</psyfocusCost>
-				<entropyGain>20</entropyGain>
+				<psyfocusCost>0.09</psyfocusCost>
+				<entropyGain>60</entropyGain>
 				<prerequisites>
 					<li>VPE_GravimpactSTNL</li>
 				</prerequisites>
@@ -225,7 +266,7 @@
 		<targetMode>Pawn</targetMode>
 		<chance>0</chance>
 		<range>18.9</range>
-		<radius>5</radius>
+		<radius>4</radius>
 		<hasAoE>false</hasAoE>
 		<castSound>VPE_SkipGate_Cast</castSound>
 		<needsTicking>true</needsTicking>
@@ -245,26 +286,14 @@
 				<path>VPE_GravmancerSTNL</path>
 				<level>4</level>
 				<order>3</order>
-				<psyfocusCost>0.30</psyfocusCost>
-				<entropyGain>20</entropyGain>
+				<psyfocusCost>0.07</psyfocusCost>
+				<entropyGain>90</entropyGain>
 				<prerequisites>
 					<li>VPE_GravimpactSTNL</li>
 				</prerequisites>
 			</li>
 		</modExtensions>
 	</VEF.Abilities.AbilityDef>
-	<ThingDef>
-		<defName>OrbitalDebrisSpawnerTargetedSTNL</defName>
-		<label>orbital debris spawner</label>
-		<thingClass>VPE_Gravmancer.OrbitalDebrisSpawnerTargeted</thingClass>
-		<category>Item</category>
-		<selectable>false</selectable>
-		<tickerType>Normal</tickerType>
-		<altitudeLayer>Item</altitudeLayer>
-		<useHitPoints>false</useHitPoints>
-		<drawerType>None</drawerType>
-		<comps/>
-	</ThingDef>
 	<!-- Level 5 -->
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_SingularitySTNL</defName>
@@ -296,8 +325,8 @@
 				<path>VPE_GravmancerSTNL</path>
 				<level>5</level>
 				<order>1</order>
-				<psyfocusCost>0.49</psyfocusCost>
-				<entropyGain>50</entropyGain>
+				<psyfocusCost>0.16</psyfocusCost>
+				<entropyGain>75</entropyGain>
 				<prerequisites>
 					<li>VPE_FallingSkySTNL</li>
 				</prerequisites>
@@ -309,7 +338,37 @@
 		</modExtensions>
 	</VEF.Abilities.AbilityDef>
 	<!-- Level 6 -->
+	
+	<!-- Have to keep this defname since some people might have that skill, else this blows up! -->
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_ShipBreakerSTNL</defName>
+		<label>Greater Gravshield</label>
+		<description>Form a gravitational anomaly around the caster that will protect nearby allied creatures from ranged attacks. \n\nThis anomaly requires a lot of concentration to maintain, causing the caster to be unable to dissipate neural heat while the shield is active.</description>
+		<iconPath>UI_GravmancerSTNL/Abilities/LargeShield</iconPath>
+		<abilityClass>VPE_Gravmancer.Ability_GreaterGravshield</abilityClass>
+		<castTime>90</castTime>
+		<chance>0</chance>
+		<targetMode>Self</targetMode>
+		<range>-1</range>
+		<radius>6.9</radius>
+		<hasAoE>false</hasAoE>
+		<castSound>PsycastPsychicPulse</castSound>
+		<needsTicking>true</needsTicking>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_GravmancerSTNL</path>
+				<level>6</level>
+				<order>2</order>
+				<psyfocusCost>0.12</psyfocusCost>
+				<entropyGain>0</entropyGain>
+				<prerequisites>
+					<li>VPE_SingularitySTNL</li>
+				</prerequisites>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+	
+		<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_AnnihilationSTNL</defName>
 		<label>Annihilation</label>
 		<description>Forces a low orbit asteroid to come crashing down onto the target world tile, the process will destroy both the target and an asteroid on the world map.</description>
@@ -326,48 +385,12 @@
 		<modExtensions>
 			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
 				<path>VPE_GravmancerSTNL</path>
-				<level>6</level>
-				<order>1</order>
-				<psyfocusCost>0.99</psyfocusCost>
+				<level>5</level>
+				<order>3</order>
+				<psyfocusCost>0.60</psyfocusCost>
 				<entropyGain>250</entropyGain>
 				<prerequisites>
-					<li>VPE_SingularitySTNL</li>
-				</prerequisites>
-			</li>
-		</modExtensions>
-	</VEF.Abilities.AbilityDef>
-	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-		<defName>VPE_ShipBreakerSTNL</defName>
-		<label>Shipbreaker</label>
-		<description>Manifest a strong gravitational field to destroy a distant ship and force the chunks to fall onto your target.</description>
-		<iconPath>UI_GravmancerSTNL/Abilities/ShipBreaker</iconPath>
-		<castTime>120</castTime>
-		<targetMode>Location</targetMode>
-		<range>25</range>
-		<chance>0</chance>
-		<targetingParameters>
-			<canTargetLocations>true</canTargetLocations>
-			<canTargetSelf>false</canTargetSelf>
-			<canTargetAnimals>true</canTargetAnimals>
-			<canTargetPawns>true</canTargetPawns>
-			<canTargetHumans>true</canTargetHumans>
-			<canTargetItems>true</canTargetItems>
-			<canTargetMechs>false</canTargetMechs>
-			<mapObjectTargetsMustBeAutoAttackable>False</mapObjectTargetsMustBeAutoAttackable>
-		</targetingParameters>
-		<showGizmoOnWorldView>true</showGizmoOnWorldView>
-		<castSound>Explosion_Thump</castSound>
-		<needsTicking>true</needsTicking>
-		<abilityClass>VPE_Gravmancer.Ability_SpawnShipChunk</abilityClass>
-		<modExtensions>
-			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
-				<path>VPE_GravmancerSTNL</path>
-				<level>5</level>
-				<order>2</order>
-				<psyfocusCost>0.75</psyfocusCost>
-				<entropyGain>80</entropyGain>
-				<prerequisites>
-					<li>VPE_AnnihilationSTNL</li>
+					<li>VPE_ShipBreakerSTNL</li>
 				</prerequisites>
 			</li>
 		</modExtensions>

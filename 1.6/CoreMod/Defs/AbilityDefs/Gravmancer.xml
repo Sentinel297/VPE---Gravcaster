@@ -183,7 +183,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_MoltenPullSTNL</defName>
 		<label>Molten Pull</label>
-		<description>Pull down a small asteroid from orbit, exerting immense pressure that melts it from within. The meteor will leave a temporary pool of lava on the ground upon impact.</description>
+		<description>Send a multitude of asteroids filled with melting rocks hurling towards the target, resulting in the affected area becoming a temporary lava field.</description>
 		<iconPath>UI_GravmancerSTNL/Abilities/MOLT</iconPath>
 		<castTime>180</castTime>
 		<durationTime>0</durationTime>
@@ -221,7 +221,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_FallingSkySTNL</defName>
 		<label>Meteor Strike</label>
-		<description>Alter the gravity of nearby asteroids, causing them to come crashing down on your target.</description>
+		<description>Alter the gravity of a nearby asteroid field, this change in trajectory will cause meteors to rain down on the target location.</description>
 		<iconPath>World/WorldObjects/Expanding/AsteroidMine</iconPath>
 		<castTime>180</castTime>
 		<durationTime>60000</durationTime>

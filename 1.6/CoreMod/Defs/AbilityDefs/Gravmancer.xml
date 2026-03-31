@@ -56,7 +56,7 @@
 		<canTargetMechs>true</canTargetMechs>
 		<!-- <mapObjectTargetsMustBeAutoAttackable>False</mapObjectTargetsMustBeAutoAttackable> -->
 	</targetingParameters>
-	<range>-1</range>
+	<range>16.9</range>
 	<hasAoE>false</hasAoE>
 	<castSound>PsycastPsychicPulse</castSound>
 	<needsTicking>true</needsTicking>

@@ -37,7 +37,7 @@
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_Gravcaster_Gravshield_STNL</defName>
 	<label>Gravshield</label>
-	<description>Protects the target creature with a gravitational anomaly that will deflect projectiles back to the attacker.</description>
+	<description>Protect the target creature with a gravitational anomaly that will deflect projectiles back to the attacker.</description>
 	<iconPath>UI_GravmancerSTNL/Abilities/TheHellIsThatNaming</iconPath>
 	<castTime>60</castTime>
 	<durationTime>12500</durationTime>

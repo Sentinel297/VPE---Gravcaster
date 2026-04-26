@@ -1,36 +1,36 @@
 <Defs>
-	<HediffDef>
-		<hediffClass>HediffWithComps</hediffClass>
-		<defName>TelekineticSatellitesSTNL</defName>
-		<label>Telekinetic Satellites</label>
-		<description>Small stones are orbiting this pawn, they will shoot themselves at nearby enemies.</description>
-		<descriptionShort>Small stones are orbiting this pawn, they will shoot themselves at nearby enemies.</descriptionShort>
-		<defaultLabelColor>(1, 0, 0)</defaultLabelColor>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<initialSeverity>1</initialSeverity>
-		<isBad>false</isBad>
-		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
-		<stages>
-			<li>
+<HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defName>TelekineticSatellitesSTNL</defName>
+	<label>Telekinetic satellites</label>
+	<description>Small stones are orbiting this pawn, they will shoot themselves at nearby enemies.</description>
+	<descriptionShort>Small stones are orbiting this pawn, they will shoot themselves at nearby enemies.</descriptionShort>
+	<defaultLabelColor>(1, 0, 0)</defaultLabelColor>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<initialSeverity>1</initialSeverity>
+	<isBad>false</isBad>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
 </li>
-		</stages>
-		<comps>
-			<li Class="HediffCompProperties_Effecter">
-				<stateEffecter>Sculpt</stateEffecter>
-			</li>
-			<li Class="VPE_Gravmancer.HediffCompProperties_ShootNearest">
-				<projectile>Bullet_Scattergun</projectile>
-				<ticksBetweenShots>100</ticksBetweenShots>
-				<range>25</range>
-				<burstCount>10</burstCount>
-				<ticksBetweenBurstShots>120</ticksBetweenBurstShots>
-			</li>
-		</comps>
-	</HediffDef>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Effecter">
+			<stateEffecter>Sculpt</stateEffecter>
+		</li>
+		<li Class="VPE_Gravmancer.HediffCompProperties_ShootNearest">
+			<projectile>Bullet_Scattergun</projectile>
+			<ticksBetweenShots>100</ticksBetweenShots>
+			<range>25</range>
+			<burstCount>10</burstCount>
+			<ticksBetweenBurstShots>120</ticksBetweenBurstShots>
+		</li>
+	</comps>
+</HediffDef>
 	
 	<HediffDef>
 		<defName>GravityEnhancedSTNL</defName>
-		<label>Increased Gravity</label>
+		<label>Increased gravity</label>
 		<description>This pawn is feeling the effects of an increased gravity pull, pinning them on the ground.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<stages>
@@ -104,7 +104,7 @@
 
 <HediffDef>
 	<defName>VPE_Gravcaster_Greater_Gravshield_STNL</defName>
-	<label>Greater Gravshield</label>
+	<label>Greater gravshield</label>
 	<description>This creature is upkeeping a gravitational anomaly to protect itself and nearby creatures. \n\nThe process is mentally taxing, causing this creature to be unable to passively lose neural heat while the shield is active.</description>
 	<hediffClass>VPE_Gravmancer.Hediff_GreaterGravShield</hediffClass>
 	<initialSeverity>1</initialSeverity>

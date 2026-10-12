@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>Gravship_Engine_StartLessLoudSTNL</defName>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Gravship/Gravship_Engine_Start</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>40.0</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+</Defs>

@@ -17,6 +17,15 @@
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2842502659</steamWorkshopUrl>
 		</li>
 	</modDependencies>
+	<modDependenciesByVersion>
+		<v1.7>
+			<li>
+				<packageId>VPE.Framework.Sentinel</packageId>
+				<displayName>VPE - Sentinel Framework</displayName>
+				<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3724841120</steamWorkshopUrl>
+			</li>
+		</v1.7>
+	</modDependenciesByVersion>
 	<packageId>VPE.Gravcaster.Sentinel</packageId>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>

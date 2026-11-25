@@ -262,7 +262,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_FallingSkyALTSTNL</defName>
 		<label>Sky drop</label>
-		<description>Deviate a meteor containing a chosen resource to send it crashing down onto the target location, its core will then be able to be mined to obtain its contents.\n\nThe cost of each material available for selection scales with both the caster's psyfocus cost factor and the resource's market value.</description>
+		<description>Deviate a meteorite containing a chosen resource to send it crashing down onto the target location, its core will then be able to be mined to obtain its contents.\n\nThe cost of each material available for selection scales with both the caster's psyfocus cost factor and the resource's market value.</description>
 		<iconPath>World/WorldObjects/Expanding/ResourceAsteroid</iconPath>
 		<castTime>60</castTime>
 		<durationTime>0</durationTime>
